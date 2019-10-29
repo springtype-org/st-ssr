@@ -1,0 +1,45 @@
+{
+    "name": "st-ssr",
+    "version": "1.0.0-alpha.1.43",
+    "publishConfig": {
+        "access": "public"
+    },
+    "keywords": [
+        "springtype server-side-rendering (SSR) library and CLI",
+        "st-ssr"
+    ],
+    "description": "CLI tool and library for high-performance headless chrome based server-side-rendering.",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/springtype-org/springtype.git"
+    },
+    "scripts": {
+        "build": "st-run st-rm-rf dist ++ system:tsc ++ st-cp package.json node_modules README.md LICENSE dist"
+    },
+    "engines": {
+        "node": ">=10"
+    },
+    "bundledDependencies": [
+        "chalk"
+    ],
+    "bin": {
+        "st-ssr": "./cli.js"
+    },
+    "author": "Aron Homberg, Michael Mannseicher",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/springtype-org/springtype/issues"
+    },
+    "homepage": "https://springtype.org",
+    "dependencies": {
+        "chalk": "^2.4.2",
+        "puppeteer": "^2.0.0"
+    },
+    "devDependencies": {
+        "@types/node": "^12.11.7",
+        "node": "^12.13.0",
+        "st-rm-rf": "^1.0.0-alpha.1.42",
+        "st-run": "^2.0.0-alpha.10",
+        "typescript": "^3.6.4"
+    }
+}
